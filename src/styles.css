@@ -1,0 +1,27 @@
+/*Global style Reseter*/
+ html, body{
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+/* styles*/
+body{
+
+
+    justify-self: center;
+    display: grid;
+    grid-template: 2fr 2fr 1fr/1fr 2fr 1fr;
+    grid-template-areas: '. about-me .'
+                         '. my-work .'
+                         'footer footer footer';
+}
+
+.about-me{
+    grid-area: about-me;
+}
+.my-work{
+    grid-area: my-work;
+}
+.contact-me{
+    grid-area: footer;
+}
