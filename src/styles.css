@@ -56,7 +56,25 @@ body{
         transform:rotate(-19deg);
     }
 }
+.my-name{
+    position: absolute;
+    transform: translateY(250px) translateX(150px) ;
+    color: #f6e8ea;
+    font-weight: 900;
+    font-size: 80px;
+    animation: name-fade-in 1s 3s ease-out both;
+}
 
+@keyframes name-fade-in {
+    0%{
+        opacity: 0;
+        transform: scale(0.8) translateY(250px) translateX(140px);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1) translateY(250px) translateX(140px);
+    }
+}
 .about-me{
     grid-area: about-me;   
     justify-self: center;
@@ -80,7 +98,7 @@ body{
     'pfp info'
     ;
     box-shadow: 1px 10px 51px -36px  rgba(34, 24, 28);
-    animation: slide 2s ease-in-out 0.2s both;
+    animation: slide 2s ease-in-out  both;
 
 }
 
@@ -143,7 +161,7 @@ body{
 .my-work-title{
     grid-area: works-title;
     justify-self: center;
-    animation: fade-in-title  1s ease .5s both;
+    animation: fade-in-title  2s ease 3s both;
 }
 
 .card-container{
@@ -182,6 +200,18 @@ body{
     transform: scale(1.05);
     
 }
+.link-icon{
+    transform: scale(1);
+    opacity: .7;
+    transition: transform .3s ease, opacity .3s ease;
+}
+.link-icon:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    opacity: 1;
+    
+}
+
 /*contact*/
 .contact-me{
     margin-top: 10px;

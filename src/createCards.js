@@ -1,3 +1,5 @@
+import { githubIcon } from "./icons/icons";
+import openlink from './icons/open-in-new.svg';
 const container = document.querySelector('.card-container');
 const addCard=(name, repository,livePreview, photo, info)=>{
     const card = document.createElement('div');
@@ -6,8 +8,8 @@ const addCard=(name, repository,livePreview, photo, info)=>{
     const about = document.createElement('p');
 
     card.classList.add('card');
-
-
+    card.style.position = "relative";
+    card.style.display='grid';
     card.style.width = '320px';
     card.style.height = '450px';
     card.style.backgroundColor ='#fff7f8'
@@ -21,8 +23,9 @@ const addCard=(name, repository,livePreview, photo, info)=>{
 
     title.innerHTML=name;
     title.style.justifySelf= 'center';
-    title.style.position = 'sticky';
-    title.style.transform='translateY(-60px)';
+    title.style.position = 'absolute';
+    title.style.transform='translateY(150px)';
+
     
 
     about.innerHTML=info;
@@ -31,13 +34,15 @@ const addCard=(name, repository,livePreview, photo, info)=>{
     about.style.margin= '5px';
     about.style.fontSize = "24px";
 
-    
-    card.appendChild(screenshot);
-    card.appendChild(title);
-    card.appendChild(about);
-
-
-    container.appendChild(card);
+    githubIcon.style.height = "20px";
+    githubIcon.style.width = '20px';
+    githubIcon.style.justifySelf= 'end';
+    githubIcon.style.alignSelf ='end';
+    githubIcon.style.marginRight = '15px';
+    githubIcon.style.marginBottom = '15px';
+    githubIcon.classList.add('link-icon')
+    const githubClone = githubIcon.cloneNode(true);  
+ 
 
     //handeling interactive layout
     card.addEventListener('mouseover',()=>{
@@ -46,7 +51,24 @@ const addCard=(name, repository,livePreview, photo, info)=>{
     card.addEventListener('mouseout',()=>{
         card.classList.remove('active');
     })
+    screenshot.addEventListener('mouseover',()=>{
+        screenshot.style.cursor= 'pointer';
+    })
+    screenshot.addEventListener('click',()=>{
+        window.open(livePreview);
+    })
+    githubClone.addEventListener('click',()=>{
+        window.open(repository);
+    })
+  
 
+
+     
+    card.appendChild(screenshot);
+    card.appendChild(title);
+    card.appendChild(about);
+    card.appendChild(githubClone);
+    container.appendChild(card);
 }
 
 export{
