@@ -1,5 +1,5 @@
 const container = document.querySelector('.card-container');
-const addCard=(name, repository,livePreview, photo)=>{
+const addCard=(name, repository,livePreview, photo, info)=>{
     const card = document.createElement('div');
     const screenshot = document.createElement('img');
     const title = document.createElement('h2')
@@ -25,7 +25,7 @@ const addCard=(name, repository,livePreview, photo)=>{
     title.style.transform='translateY(-60px)';
     
 
-    about.innerHTML="Welcome to the Battleship game project! This is an implementation of the classic strategic game Battleship, where players aim to sink their opponent's fleet of ships by guessing their locations.";
+    about.innerHTML=info;
     about.style.justifySelf="center";
     about.style.alignSelf="start";
     about.style.margin= '5px';

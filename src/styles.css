@@ -143,16 +143,38 @@ body{
 .my-work-title{
     grid-area: works-title;
     justify-self: center;
-    
+    animation: fade-in-title  1s ease .5s both;
 }
+
 .card-container{
     margin-top: 100px;
     grid-area: project-cards;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 
 }
 .card{
-    opacity: .6;
+    justify-self: center;
+    animation: fade-in-card 1s ease 2s backwards;
+    opacity: .7;
     transition: transform .3s ease-in, opacity .3s ease-out;
+}
+@keyframes fade-in-card{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: .7;
+    }
+}
+@keyframes fade-in-title{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .card.active{
@@ -162,7 +184,7 @@ body{
 }
 /*contact*/
 .contact-me{
-
+    margin-top: 10px;
     grid-area: footer;
     position: bottom;
     background-color: #22181c;
