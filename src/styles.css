@@ -1,27 +1,155 @@
 /*Global style Reseter*/
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap');
  html, body{
     margin: 0px;
     width: 100vw;
     height: 100vh;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    overflow-x: hidden;
+
 }
+.alumni-sans-pinstripe-regular {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.alumni-sans-pinstripe-regular-italic {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
 /* styles*/
 body{
-
-
+    background-color: #f6e8ea;
+    color: #22181c;
     justify-self: center;
     display: grid;
-    grid-template: 2fr 2fr 1fr/1fr 2fr 1fr;
-    grid-template-areas: '. about-me .'
-                         '. my-work .'
-                         'footer footer footer';
+    grid-template-rows: repeat(2, 2fr) 1fr;
+    grid-column: 1fr;
+    grid-template-areas: 'about-me'
+                         'my-work'
+                         'footer';
+}
+/*header*/
+#background-el{
+    position: absolute;
+    background-color: #F13030;
+    width: 150vw;
+    height: 50vh;
+    z-index: -1;
+    box-shadow:1px 10px 51px -36px  rgba(34, 24, 28);
+    transform-origin: bottom left;
+    transform: translate(0, -250px);
+    animation: bounce 1.5s ease 0s forwards ;
+
+}
+@keyframes bounce{
+    0%{
+        transform:rotate(-90deg)
+    }
+
+    100%{
+        transform:rotate(-21deg);
+    }
 }
 
 .about-me{
     grid-area: about-me;
+    position: absolute;   
+    justify-self: center;
 }
+.about-me-content{
+    justify-items: center;
+    
+}
+.about-me-card{
+    background-color: #fff7f8;
+    margin-top: 100px;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: 
+    'pfp title'
+    'pfp info'
+    ;
+    box-shadow: 1px 10px 51px -36px  rgba(34, 24, 28);
+    animation: slide 2s ease-in-out 0.2s forwards;
+}
+
+.pfp{
+    grid-area: pfp;
+    animation: grow 1s ease-in-out 1.5s both;
+}
+.about-me-title{
+    grid-area: title;
+    transform: translateX( 50px);
+}
+.paragraph{
+    grid-area: info;
+    transform: translateX( 50px);
+    max-width: 500px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 0px;
+}
+@keyframes slide {
+    0%{
+        opacity: 0;
+        transform: translateX(100vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes grow {
+    0%{
+        opacity: 0;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+/*projects*/
 .my-work{
+
+    
     grid-area: my-work;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto 1fr ;
+    grid-template-areas:
+    'works-title works-title'
+    'project-cards project-cards'
+    ;
 }
+.my-work-content{
+    justify-items: center;
+}
+.my-work-title{
+    grid-area: works-title;
+}
+.card-container{
+    grid-area: project-cards;
+}
+/*contact*/
 .contact-me{
+
     grid-area: footer;
+    position: bottom;
+    background-color: #22181c;
+}
+.contact-me-content{
+    justify-items: center;    
+}
+
+
+@media (min-width: 320px){
+
+}
+@media (max-width: 1920px){
 }
