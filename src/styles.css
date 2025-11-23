@@ -23,6 +23,7 @@
 /* styles*/
 body{
     background-color: #f6e8ea;
+    background: linear-gradient(to bottom, #f6e8ea 70%,#d4c8ca);
     color: #22181c;
     justify-self: center;
     display: grid;
@@ -35,7 +36,7 @@ body{
 /*header*/
 #background-el{
     position: relative;
-    background-color: #F13030;
+    background: linear-gradient(to top,#F13030, #f45b69  ) ;
     width: 150vw;
     height: 50vh;
     z-index: -1;
