@@ -45,6 +45,7 @@ body{
     transform: translateY(-20vh);
     animation: bounce 1.5s ease 0s forwards ;
 
+
 }
 @keyframes bounce{
     0%{
@@ -146,18 +147,18 @@ body{
 
     margin-top: 100px;
     grid-area: my-work;
-    width:  100vw;
+   
 
 }
 .my-work-content{
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    width: 100vw;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
     grid-template-rows:auto 1fr  ;
     grid-template-areas:
-    '. works-title .'
-    '. project-cards .';
+    '. works-title works-title .'
+    '. project-cards project-cards .';
     gap: 5px;
-    padding: 15px;
 }
 .my-work-title{
     grid-area: works-title;
@@ -221,12 +222,60 @@ body{
     background-color: #22181c;
 }
 .contact-me-content{
-    justify-items: center;    
+    width:100vw;
+    
+    justify-items: center;  
+    color: #f6e8ea;
+    font-size: 25px;  
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    ". ft-title ft-pfp ."
+    ". ft-info ft-pfp ."
+    ". ft-address ft-pfp ."
+    ". ft-links ft-pfp .";
 }
 
+.footer-title{
+    grid-area: ft-title;
+    justify-self: start;
+}
+.footer-info{
+    grid-area: ft-info;
+    justify-self: start;
+}
+.footer-address{
+    grid-area: ft-address;
+    justify-self: start;
+}
+.footer-links{
+    grid-area: ft-links;
+    justify-self: start;
+}
+.footer-pfp{
+    grid-area: ft-pfp;
+    padding: 40px;
+}
+.icon-white {
+  filter: invert(1);
+}
 
-@media (min-width: 320px){
+/*phone screens 900px*/
+@media (max-width: 600px){
 
 }
-@media (max-width: 1920px){
+/*tablet screens 1100*/
+@media (min-width: 600px) and (max-width: 1100px){
+    .about-me-card{
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 3fr;
+        grid-template-areas: 
+    'pfp title'
+    'pfp info'
+    ;
+    }
+    .pfp{
+
+    }
 }

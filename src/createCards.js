@@ -1,7 +1,7 @@
 import { githubIcon } from "./icons/icons";
-import openlink from './icons/open-in-new.svg';
+
 const container = document.querySelector('.card-container');
-const addCard=(name, repository,livePreview, photo, info)=>{
+const addCard=(name, repository,livePreview , photo, info)=>{
     const card = document.createElement('div');
     const screenshot = document.createElement('img');
     const title = document.createElement('h2')
@@ -13,13 +13,14 @@ const addCard=(name, repository,livePreview, photo, info)=>{
     card.style.width = '320px';
     card.style.height = '450px';
     card.style.backgroundColor ='#fff7f8'
-    card.style.borderRadius ='20px'
+    card.style.borderRadius ='10px 10px 0px 0px'
     card.style.boxShadow='1px 10px 51px -36px  rgba(34, 24, 28)'
 
-    screenshot.src= photo;
+    screenshot.src = photo
+    screenshot.sizes ="(max-width)"
     screenshot.style.width = '320px';
     screenshot.style.height= '200px';
-    screenshot.style.borderRadius =' 20px 20px 0px 0px'
+    screenshot.style.borderRadius =' 10px 10px 0px 0px'
 
     title.innerHTML=name;
     title.style.justifySelf= 'center';
@@ -34,8 +35,8 @@ const addCard=(name, repository,livePreview, photo, info)=>{
     about.style.margin= '5px';
     about.style.fontSize = "24px";
 
-    githubIcon.style.height = "20px";
-    githubIcon.style.width = '20px';
+    githubIcon.style.height = "30px";
+    githubIcon.style.width = '30px';
     githubIcon.style.justifySelf= 'end';
     githubIcon.style.alignSelf ='end';
     githubIcon.style.marginRight = '15px';
