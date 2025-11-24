@@ -87,6 +87,7 @@ body{
     
 }
 .about-me-card{
+    width: 800px;
     background-color: #fff7f8;
     z-index: 1;
     position: relative;
@@ -115,7 +116,7 @@ body{
 .paragraph{
     grid-area: info;
     transform: translateX( 50px);
-    max-width: 500px;
+    max-width: 400px;
     font-size: 24px;
     font-weight: 600;
     margin-top: 0px;
@@ -165,7 +166,6 @@ body{
     justify-self: center;
     animation: fade-in-title  2s ease 3s both;
 }
-
 .card-container{
     margin-top: 100px;
     grid-area: project-cards;
@@ -196,7 +196,6 @@ body{
         opacity: 1;
     }
 }
-
 .card.active{
     opacity: 1;
     transform: scale(1.05);
@@ -213,7 +212,6 @@ body{
     opacity: 1;
     
 }
-
 /*contact*/
 .contact-me{
     margin-top: 10px;
@@ -236,7 +234,6 @@ body{
     ". ft-address ft-pfp ."
     ". ft-links ft-pfp .";
 }
-
 .footer-title{
     grid-area: ft-title;
     justify-self: start;
@@ -263,19 +260,67 @@ body{
 
 /*phone screens 900px*/
 @media (max-width: 600px){
+    .about-me-card{
+        width: 800px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr ;
+        grid-template-areas: 
+    'pfp'
+    'title'
+    'info'
+    ;
 
+    }
+    .pfp{
+
+    
+        
+    }
+    .my-name{
+        top: -350px;
+        right: 350px;
+    }
+    .paragraph{
+        clear: left;
+    }
+    .link-icon{
+        top: 50px;
+    }
+    .git-icon{
+        top: 345px;
+    }
 }
 /*tablet screens 1100*/
 @media (min-width: 600px) and (max-width: 1100px){
     .about-me-card{
+        width: 800px;
         grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr 3fr;
+        grid-template-rows: 1fr 2fr ;
         grid-template-areas: 
     'pfp title'
     'pfp info'
+    'info info'
     ;
+
     }
     .pfp{
 
+        position: relative;
+        left: -10px;
+        bottom: 120px;
+        
+    }
+    .my-name{
+        top: -350px;
+        right: 350px;
+    }
+    .paragraph{
+        clear: left;
+    }
+    .link-icon{
+        top: 50px;
+    }
+    .git-icon{
+        top: 345px;
     }
 }

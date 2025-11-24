@@ -40,17 +40,18 @@ addCard('Admin Dashboard',
 
 const aboutMe = document.querySelector('.about-me-card');
 const gitTopClone =githubIcon.cloneNode(true);
+gitTopClone.classList.add('git-icon');
 gitTopClone.style.position = "absolute";
 gitTopClone.style.width= '30px';
 gitTopClone.style.height = "30px";
-gitTopClone.style.transform="translate(-70px , -4px)"
+gitTopClone.style.transform="translate(-30px , 55px)"
 
 const linkedTopClone = linkedinIcon.cloneNode(true);
 linkedTopClone.style.position = "absolute";
-linkedTopClone.classList.add('link-icon')
+linkedTopClone.classList.add('link-icon');
 linkedTopClone.style.width= '30px';
 linkedTopClone.style.height = "30px";
-linkedTopClone.style.transform="translate(890px , 280px)"
+linkedTopClone.style.transform="translate(770px , 350px)"
 
 gitTopClone.addEventListener('click',()=>{
         window.open("https://github.com/VoidOfMaya");
