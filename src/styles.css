@@ -354,16 +354,19 @@ body{
             'info'
         ;
         
+        position: relative;
         grid-area: my-card;
-        transform: translateY(50px);
+        top: 350px;
     }
 
     .pfp{
+        position: absolute;
         justify-self: center;
-        margin: 10px;          
+        margin: 10px; 
+        top: -350px;         
     }
     .my-name{
-        top: 0px;
+        top: -320px;
         right: 250px;
     }
     .about-me-title{
@@ -385,9 +388,13 @@ body{
         right: 0px;
     }
     .top-icon-container{
-    transform: translate(40vw, 730px);
+    transform: translate(42vw, 380px);
     }   
     /*content*/
+    .my-work{
+        position: relative;
+        top: 290px;
+    }
     .my-work-content{
     grid-template-columns:  1fr;
     grid-template-rows:auto 1fr  ;
