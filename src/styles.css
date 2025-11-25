@@ -274,38 +274,7 @@ body{
   filter: invert(1);
 }
 
-/*phone screens 900px*/
-@media (max-width: 730px){
-    .about-me-card{
-        width: 800px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 2fr ;
-        grid-template-areas: 
-    'pfp'
-    'title'
-    'info'
-    ;
 
-    }
-    .pfp{
-
-    
-        
-    }
-    .my-name{
-        top: -350px;
-        right: 350px;
-    }
-    .paragraph{
-        clear: left;
-    }
-    .link-icon{
-        top: 50px;
-    }
-    .git-icon{
-        top: 345px;
-    }
-}
 /*tablet screens 1100*/
 @media (min-width: 730px) and (max-width: 1100px){
     .about-me-card{
@@ -352,5 +321,83 @@ body{
     .card-container{
         gap: 10px;
         margin: 10px;
+    }
+}
+/*phone screens 900px*/
+@media (max-width: 730px){
+    
+    .about-me{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "red-back"
+        "my-card"
+        ;
+        position: relative;
+    }
+    #background-el{
+        transform: none;
+        grid-area: red-back;
+        z-index: 0;
+    }
+    
+    .about-me-card{
+        display: grid;
+        width:100vw;
+        
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            'pfp'
+            'title'
+            'info'
+        ;
+        
+        grid-area: my-card;
+        transform: translateY(50px);
+    }
+
+    .pfp{
+        justify-self: center;
+        margin: 10px;          
+    }
+    .my-name{
+        top: 0px;
+        right: 250px;
+    }
+    .about-me-title{
+         transform: translateX( 0px);
+        justify-self: center;
+        
+    }
+    .paragraph{
+        transform: translateX( 0px);
+        padding: 12px;
+        max-width:100vw;
+    }
+    .link-top-icon{
+        top: 50px;
+        left: -10px;
+    }
+    .git-icon{
+        top: 347px;
+        right: 0px;
+    }
+    .top-icon-container{
+    transform: translate(40vw, 730px);
+    }   
+    /*content*/
+    .my-work-content{
+    grid-template-columns:  1fr;
+    grid-template-rows:auto 1fr  ;
+    grid-template-areas:
+    'works-title '
+    'project-cards';
+    gap: 0px;
+    }
+    .card-container{
+        gap: 10px;
+        margin: 0px;
     }
 }
