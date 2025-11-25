@@ -46,8 +46,6 @@ body{
     transform: translateY(-20vh);
     animation: bounce 1.5s ease 0s forwards ;
     overflow: hidden;
-
-
 }
 @keyframes bounce{
     0%{
@@ -62,7 +60,7 @@ body{
 }
 .my-name{
     position: absolute;
-    transform: translateY(250px) translateX(150px) ;
+    transform: translateY(250px) translateX(140px) ;
     color: #f6e8ea;
     font-weight: 900;
     font-size: 80px;
@@ -76,7 +74,7 @@ body{
     }
     100%{
         opacity: 1;
-        transform: scale(1) translateY(250px) translateX(140px);
+        transform: scale(1) translateY(310px) translateX(120px);
     }
 }
 .about-me{
@@ -89,7 +87,8 @@ body{
     
 }
 .about-me-card{
-    width: 800px;
+    width: 70vw;
+    
     background-color: #fff7f8;
     z-index: 1;
     position: relative;
@@ -101,6 +100,7 @@ body{
     grid-template-areas: 
     'pfp title'
     'pfp info'
+    'pfp icons'
     ;
     box-shadow: 1px 10px 51px -36px  rgba(34, 24, 28);
     justify-self: center;
@@ -109,6 +109,7 @@ body{
 }
 
 .pfp{
+
     grid-area: pfp;
     animation: grow 1s ease-in-out 1.5s both;
 }
@@ -117,12 +118,15 @@ body{
     transform: translateX( 50px);
 }
 .paragraph{
+    position: relative;
     grid-area: info;
-    transform: translateX( 50px);
-    max-width: 400px;
-    font-size: 24px;
+    transform: none;
+    left: 10px;
+    min-width: auto;
+    font-size: 1.6rem;
     font-weight: 600;
-    margin-top: 0px;
+    margin: 0;
+    padding: 10px;
 }
 @keyframes slide {
     0%{
@@ -139,11 +143,11 @@ body{
 @keyframes grow {
     0%{
         opacity: 0;
-        transform: scale(1);
+        transform: scale(1) translateX(0px);
     }
     100%{
         opacity: 1;
-        transform: scale(1.2);
+        transform: scaleX(1.2) scaleY(1.5) translateX(-20px);
     }
 }
 .link-top-icon{
@@ -279,24 +283,31 @@ body{
 @media (min-width: 730px) and (max-width: 1100px){
     .about-me-card{
         display: block;
-        min-width: 600px;
-        max-width: 90vw;
+        min-width: auto;
+        max-width:auto;
 
     }
     .pfp{
 
         float: left;
         position: relative;
-        top: -37px;
-        right: -10px;
+        top: -55px;
+        right: 30px;
    
     }
-    .my-name{
-        top: -330px;
-        right: 150px;
+    @keyframes name-fade-in {
+        0%{
+            opacity: 0;
+            transform: scale(0.8) translateY(-85px) translateX(-140px);
+        }
+        100%{
+            opacity: 1;
+            transform: scale(1) translateY(-85px) translateX(-20px);
+        }
     }
     .paragraph{
-        max-width:600px;
+        position: relative;
+        min-width:auto;
     }
     .link-top-icon{
         top: 50px;
@@ -360,25 +371,46 @@ body{
     }
 
     .pfp{
+        transform: translateX(none);
         position: absolute;
         justify-self: center;
         margin: 10px; 
-        top: -350px;         
+        top: -360px;         
     }
+    @keyframes grow {
+    0%{
+        opacity: 0;
+        transform: scale(1) ;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1.2) translateX(28px) ;
+    }
+}
     .my-name{
         top: -320px;
         right: 220px;
         transform: none;
         justify-self: center;
     }
+    @keyframes name-fade-in {
+        0%{
+            opacity: 0;
+            transform: scale(0.8) translateY(240px) translateX(-140px);
+        }
+        100%{
+            opacity: 1;
+            transform: scale(1) translateY(240px) translateX(120px);
+        }
+    }
     .about-me-title{
-         transform: translateX( 0px);
+         transform: translateX( 30px);
         justify-self: center;
         margin-bottom: 0px;
         
     }
     .paragraph{
-        transform: translateX( 0px);
+        transform: translateX( 30px);
         padding: 12px;
         max-width:100vw;
     }

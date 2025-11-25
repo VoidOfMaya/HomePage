@@ -40,7 +40,7 @@ const aboutMe = document.querySelector('.about-me-card');
 
 const iconContainer = document.createElement('div');
 iconContainer.style.display= 'grid';
-iconContainer.style.position="absolute";
+//iconContainer.style.position="absolute";
 iconContainer.style.gridTemplateColumns = "1fr 1fr";
 iconContainer.style.gridTemplateRows = "1fr";
 iconContainer.style.gridTemplateAreas =`"git linked"`;
@@ -48,7 +48,7 @@ iconContainer.style.justifyItems="center";
 iconContainer.style.alignItems="center";
 iconContainer.style.gap="10px";
 iconContainer.classList.add('top-icon-container');
-
+iconContainer.style.gridArea="icons";
 
 
 
