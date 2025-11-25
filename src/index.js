@@ -39,13 +39,13 @@ addCard('Admin Dashboard',
 const aboutMe = document.querySelector('.about-me-card');
 
 const iconContainer = document.createElement('div');
-iconContainer.style.display= 'grid';
-iconContainer.style.gridTemplateColumns = "1fr 1fr";
-iconContainer.style.gridTemplateRows = "1fr";
+//iconContainer.style.display= 'grid';
+//iconContainer.style.gridTemplateColumns = "1fr 1fr";
+//iconContainer.style.gridTemplateRows = "1fr";
 iconContainer.style.gridTemplateAreas =`"git linked"`;
-iconContainer.style.justifyItems="center";
+iconContainer.style.justifySelf="end";
 iconContainer.style.alignItems="center";
-iconContainer.style.gap="10px";
+//iconContainer.style.gap="10px";
 iconContainer.classList.add('top-icon-container');
 iconContainer.style.gridArea="icons";
 
@@ -56,6 +56,8 @@ gitTopClone.style.gridArea = "git";
 gitTopClone.style.width= '30px';
 gitTopClone.style.height = "30px";
 gitTopClone.style.margin= "0px";
+gitTopClone.style.marginRight= "10px";
+
 
 
 
@@ -64,6 +66,7 @@ linkedTopClone.classList.add('link-icon')
 linkedTopClone.style.gridArea = "linked";
 linkedTopClone.style.width= '30px';
 linkedTopClone.style.height = "30px";
+linkedTopClone.style.marginRight= "10px";
 
 gitTopClone.addEventListener('click',()=>{
         window.open("https://github.com/VoidOfMaya");
