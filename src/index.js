@@ -36,32 +36,46 @@ addCard('Admin Dashboard',
  
         "DashnBoard is a simplistic strictly html+css project intended for the practice of front end UI and styling skills"
 );
-
-
 const aboutMe = document.querySelector('.about-me-card');
+
+const iconContainer = document.createElement('div');
+iconContainer.style.display= 'grid';
+iconContainer.style.position="absolute";
+iconContainer.style.gridTemplateColumns = "1fr 1fr";
+iconContainer.style.gridTemplateRows = "1fr";
+iconContainer.style.gridTemplateAreas =`"git linked"`;
+iconContainer.style.justifyItems="center";
+iconContainer.style.alignItems="center";
+iconContainer.style.gap="10px";
+iconContainer.classList.add('top-icon-container');
+
+
+
+
 const gitTopClone =githubIcon.cloneNode(true);
-gitTopClone.classList.add('git-icon');
-gitTopClone.style.position = "absolute";
+gitTopClone.style.gridArea = "git";
 gitTopClone.style.width= '30px';
 gitTopClone.style.height = "30px";
-gitTopClone.style.transform="translate(-30px , 55px)"
+gitTopClone.style.margin= "0px";
+
+
 
 const linkedTopClone = linkedinIcon.cloneNode(true);
-linkedTopClone.style.position = "absolute";
-linkedTopClone.classList.add('link-icon');
+linkedTopClone.classList.add('link-icon')
+linkedTopClone.style.gridArea = "linked";
 linkedTopClone.style.width= '30px';
 linkedTopClone.style.height = "30px";
-linkedTopClone.style.transform="translate(770px , 350px)"
 
 gitTopClone.addEventListener('click',()=>{
         window.open("https://github.com/VoidOfMaya");
 })
 linkedTopClone.addEventListener('click',()=>{
-        
+        window.open("https://www.linkedin.com/in/maya-mzarib-57173039a/");
 })
 
-aboutMe.appendChild(gitTopClone);
-aboutMe.appendChild(linkedTopClone);
+iconContainer.appendChild(gitTopClone);
+iconContainer.appendChild(linkedTopClone);
+aboutMe.appendChild(iconContainer);
 
 
 
@@ -72,8 +86,8 @@ gitFtClone.style.width= '30px';
 gitFtClone.style.height = "30px";
 
 const linkedFtClone = linkedinIcon.cloneNode(true);
-linkedFtClone.classList.add('icon-white')
-linkedFtClone.classList.add('link-icon')
+linkedFtClone.classList.add('link-icon');
+linkedFtClone.classList.add('icon-white');
 linkedFtClone.style.width= '30px';
 linkedFtClone.style.height = "30px";
 linkedFtClone.style.transform="translateY(-15px)";
@@ -82,7 +96,7 @@ gitFtClone.addEventListener('click',()=>{
         window.open("https://github.com/VoidOfMaya");
 })
 linkedFtClone.addEventListener('click',()=>{
-        
+        window.open("https://www.linkedin.com/in/maya-mzarib-57173039a/");
 })
 
 

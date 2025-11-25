@@ -35,6 +35,7 @@ body{
 }
 /*header*/
 #background-el{
+    will-change: transform;
     position: relative;
     background: linear-gradient(to top,#F13030, #f45b69  ) ;
     width: 100vw;
@@ -144,6 +145,19 @@ body{
         opacity: 1;
         transform: scale(1.2);
     }
+}
+.link-top-icon{
+    opacity: .7;
+    transform: scale(1);
+    transition: transform .5s ease-out,opacity .5s ease-out;
+}
+.link-top-icon:hover{
+    opacity: 1;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.top-icon-container{
+    transform: translate(730px, 350px);
 }
 /*projects*/
 .my-work{
@@ -261,7 +275,7 @@ body{
 }
 
 /*phone screens 900px*/
-@media (max-width: 600px){
+@media (max-width: 730px){
     .about-me-card{
         width: 800px;
         grid-template-columns: 1fr;
@@ -293,36 +307,50 @@ body{
     }
 }
 /*tablet screens 1100*/
-@media (min-width: 600px) and (max-width: 1100px){
+@media (min-width: 730px) and (max-width: 1100px){
     .about-me-card{
-        width: 800px;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr 2fr ;
-        grid-template-areas: 
-    'pfp title'
-    'pfp info'
-    'info info'
-    ;
+        display: block;
+        min-width: 600px;
+        max-width: 90vw;
 
     }
     .pfp{
 
+        float: left;
         position: relative;
-        left: -10px;
-        bottom: 120px;
-        
+        top: -37px;
+        right: -10px;
+   
     }
     .my-name{
-        top: -350px;
-        right: 350px;
+        top: -330px;
+        right: 150px;
     }
     .paragraph{
-        clear: left;
+        max-width:600px;
     }
-    .link-icon{
+    .link-top-icon{
         top: 50px;
+        left: -10px;
     }
     .git-icon{
-        top: 345px;
+        top: 347px;
+        right: 0px;
+    }
+    .top-icon-container{
+    transform: translate(380px, -440px);
+    }   
+    /*content*/
+    .my-work-content{
+    grid-template-columns:  1fr;
+    grid-template-rows:auto 1fr  ;
+    grid-template-areas:
+    'works-title '
+    'project-cards';
+    gap: 0px;
+    }
+    .card-container{
+        gap: 10px;
+        margin: 10px;
     }
 }
