@@ -1,0 +1,492 @@
+@import url(https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap);
+/*Global style Reseter*/
+ html, body{
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    overflow-x: hidden;
+
+}
+.alumni-sans-pinstripe-regular {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.alumni-sans-pinstripe-regular-italic {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* styles*/
+body{
+    background-color: #f6e8ea;
+    background: linear-gradient(to bottom, #f6e8ea 70%,#d4c8ca);
+    color: #22181c;
+    justify-self: center;
+    display: grid;
+    grid-template-rows: repeat(2, 2fr) 1fr;
+    grid-column: 1fr;
+    grid-template-areas: 'about-me'
+                         'my-work'
+                         'footer';
+}
+/*header*/
+#background-el{
+    will-change: transform;
+    position: relative;
+    background: linear-gradient(to top,#F13030, #f45b69  ) ;
+    width: 100vw;
+    height: 50vh;
+    z-index: -1;
+    box-shadow:1px 10px 51px -36px  rgba(34, 24, 28);
+    transform-origin: bottom left;
+    transform: translateY(-20vh);
+    animation: bounce 1.5s ease 0s forwards ;
+    overflow: hidden;
+}
+@keyframes bounce{
+    0%{
+     
+        transform:skewY(-90deg)
+    }
+
+    100%{
+       
+        transform:skewY(-20deg);
+    }
+}
+.my-name{
+    position: absolute;
+    transform: translateY(250px) translateX(140px) ;
+    color: #f6e8ea;
+    font-weight: 900;
+    font-size: 80px;
+    animation: name-fade-in 1s 3s ease-out both;
+}
+
+@keyframes name-fade-in {
+    0%{
+        opacity: 0;
+        transform: scale(0.8) translateY(250px) translateX(140px);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1) translateY(310px) translateX(120px);
+    }
+}
+.about-me{
+    grid-area: about-me;   
+    justify-self: center;
+
+}
+.about-me-content{
+    justify-items: center;
+    
+}
+.about-me-card{
+    width: 70vw;
+    
+    background-color: #fff7f8;
+    z-index: 1;
+    position: relative;
+    margin-top: -35vh;
+
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: 
+    'pfp title'
+    'pfp info'
+    'pfp icons'
+    ;
+    box-shadow: 1px 10px 51px -36px  rgba(34, 24, 28);
+    justify-self: center;
+    animation: slide 2s ease-in-out  both;
+
+}
+
+.pfp{
+
+    grid-area: pfp;
+    animation: grow 1s ease-in-out 1.5s both;
+}
+.about-me-title{
+    grid-area: title;
+    transform: translateX( 50px);
+}
+.paragraph{
+    position: relative;
+    grid-area: info;
+    transform: none;
+    left: 10px;
+    min-width: auto;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 10px;
+}
+@keyframes slide {
+    0%{
+        opacity: 0;
+        transform:translateX(100vw);
+
+    }
+    100%{
+        opacity: 1;
+        transform:translateX(0);
+     
+    }
+}
+@keyframes grow {
+    0%{
+        opacity: 0;
+        transform: scale(1) translateX(0px);
+    }
+    100%{
+        opacity: 1;
+        transform: scaleX(1.2) scaleY(1.5) translateX(-20px);
+    }
+}
+.link-top-icon{
+    opacity: .7;
+    transform: scale(1);
+    transition: transform .5s ease-out,opacity .5s ease-out;
+}
+.link-top-icon:hover{
+    opacity: 1;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.top-icon-container{
+    transform: translate(730px, 350px);
+}
+/*projects*/
+.my-work{
+
+    margin-top: 100px;
+    grid-area: my-work;
+   
+
+}
+.my-work-content{
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows:auto 1fr  ;
+    grid-template-areas:
+    '. works-title works-title .'
+    '. project-cards project-cards .';
+    gap: 5px;
+}
+.my-work-title{
+    grid-area: works-title;
+    justify-self: center;
+    animation: fade-in-title  2s ease 3s both;
+}
+.card-container{
+    margin-top: 100px;
+    grid-area: project-cards;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+}
+.card{
+    justify-self: center;
+    animation: fade-in-card 1s ease 2s backwards;
+    opacity: .7;
+    transition: transform .3s ease-in, opacity .3s ease-out;
+}
+@keyframes fade-in-card{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: .7;
+    }
+}
+@keyframes fade-in-title{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.card.active{
+    opacity: 1;
+    transform: scale(1.05);
+    
+}
+.link-icon{
+    transform: scale(1);
+    opacity: .7;
+    transition: transform .3s ease, opacity .3s ease;
+}
+.link-icon:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    opacity: 1;
+    
+}
+/*contact*/
+.contact-me{
+    margin-top: 10px;
+    grid-area: footer;
+    position: bottom;
+    background-color: #22181c;
+}
+.contact-me-content{
+    width:100vw;
+    
+    justify-items: center;  
+    color: #f6e8ea;
+    font-size: 25px;  
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    ". ft-title ft-pfp ."
+    ". ft-info ft-pfp ."
+    ". ft-address ft-pfp ."
+    ". ft-links ft-pfp .";
+}
+.footer-title{
+    grid-area: ft-title;
+    justify-self: start;
+}
+.footer-info{
+    grid-area: ft-info;
+    justify-self: start;
+}
+.footer-address{
+    grid-area: ft-address;
+    justify-self: start;
+}
+.footer-links{
+    grid-area: ft-links;
+    justify-self: start;
+}
+.footer-pfp{
+    grid-area: ft-pfp;
+    padding: 40px;
+}
+.icon-white {
+  filter: invert(1);
+}
+
+
+/*tablet screens 1100*/
+@media (min-width: 730px) and (max-width: 1100px){
+    .about-me-card{
+        display: block;
+        min-width: auto;
+        max-width:auto;
+
+    }
+    .pfp{
+
+        float: left;
+        position: relative;
+        top: -55px;
+        right: 30px;
+   
+    }
+    @keyframes name-fade-in {
+        0%{
+            opacity: 0;
+            transform: scale(0.8) translateY(-85px) translateX(-140px);
+        }
+        100%{
+            opacity: 1;
+            transform: scale(1) translateY(-85px) translateX(-20px);
+        }
+    }
+    .paragraph{
+        position: relative;
+        min-width:auto;
+    }
+    .link-top-icon{
+        display: none !important;  
+    }
+    .git-icon{
+        display: none !important;
+    }
+    .top-icon-container{
+        display: none !important;
+        width: min-content;
+        transform: translate(505px, -490px);
+    }   
+    /*content*/
+    .my-work-content{
+        grid-template-columns:  1fr;
+        grid-template-rows:auto 1fr  ;
+        grid-template-areas:
+        'works-title '
+        'project-cards';
+        gap: 0px;
+    }
+    .card-container{
+        gap: 10px;
+        margin: 10px;
+    }
+}
+/*phone screens 900px*/
+@media (max-width: 730px){
+    
+    .about-me{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "red-back"
+        "my-card"
+        ;
+        position: relative;
+    }
+    #background-el{
+        transform: none;
+        grid-area: red-back;
+        z-index: 0;
+    }
+    
+    .about-me-card{
+        display: grid;
+        width:100vw;
+        
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            'pfp'
+            'title'
+            'info'
+        ;
+        
+        position: relative;
+        grid-area: my-card;
+        top: 350px;
+    }
+
+    .pfp{
+        transform: translateX(none);
+        position: absolute;
+        justify-self: center;
+        margin: 10px; 
+        top: -360px;         
+    }
+    @keyframes grow {
+    0%{
+        opacity: 0;
+        transform: scale(1) ;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1.2) translateX(28px) ;
+    }
+}
+    .my-name{
+        top: -320px;
+        right: 220px;
+        transform: none;
+        justify-self: center;
+    }
+    @keyframes name-fade-in {
+        0%{
+            opacity: 0;
+            transform: scale(0.8) translateY(240px) translateX(-140px);
+        }
+        100%{
+            opacity: 1;
+            transform: scale(1) translateY(240px) translateX(120px);
+        }
+    }
+    .about-me-title{
+         transform: translateX( 30px);
+        justify-self: center;
+        margin-bottom: 0px;
+        
+    }
+    .paragraph{
+        transform: translateX( 30px);
+        padding: 12px;
+        max-width:100vw;
+    }
+    .link-top-icon{
+        top: 50px;
+        left: -10px;
+    }
+    .git-icon{
+        height: 40px;
+        width: 40px;
+        top: 347px;
+        right: 0px;
+    }
+    .top-icon-container{
+        position: relative;
+        transform: translate(-41vw, 40px);
+    }   
+    /*content*/
+    .my-work{
+        position: relative;
+        top: 290px;
+    }
+    .my-work-content{
+    grid-template-columns:  1fr;
+    grid-template-rows:auto 1fr  ;
+    grid-template-areas:
+    'works-title '
+    'project-cards';
+    gap: 0px;
+    }
+    .card-container{
+        gap: 10px;
+        margin: 5px;
+    }
+    /*footer*/
+    .contact-me{
+        position: relative;
+        top: 300px;
+    }
+    .contact-me-content{
+        width:100vw;     
+        justify-items: center;  
+        color: #f6e8ea;
+        font-size: 25px;  
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "ft-title"
+        "ft-info"
+        "ft-address"
+        "ft-links"
+        "ft-pfp"
+        ;
+    }
+    .footer-title{
+        grid-area: ft-title;
+        justify-self: center;
+    }
+    .footer-info{
+        grid-area: ft-info;
+        justify-self: center;
+    }
+    .footer-address{
+        grid-area: ft-address;
+        justify-self: center;
+        padding: 20px;
+    }
+    .footer-links{
+        grid-area: ft-links;
+        justify-self: center;
+    }
+    .footer-pfp{
+        grid-area: ft-pfp;
+        padding: 0px;
+        width: 100vw;
+    }
+
+}
