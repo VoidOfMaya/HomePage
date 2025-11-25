@@ -424,7 +424,7 @@ body{
     }
     .top-icon-container{
         position: relative;
-        transform: translate(42vw, 390px);
+        transform: translate(-42vw, 40px);
     }   
     /*content*/
     .my-work{
