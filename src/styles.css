@@ -353,18 +353,23 @@ body{
             'title'
             'info'
         ;
+        
+        position: relative;
         grid-area: my-card;
-        transform: translateY(50px);
+        top: 350px;
     }
 
     .pfp{
+        position: absolute;
         justify-self: center;
         margin: 10px; 
-         
+        top: -350px;         
     }
     .my-name{
-        top: 0px;
-        right: 250px;
+        top: -320px;
+        right: 220px;
+        transform: none;
+        justify-self: center;
     }
     .about-me-title{
          transform: translateX( 0px);
@@ -386,9 +391,14 @@ body{
         right: 0px;
     }
     .top-icon-container{
-    transform: translate(40vw, 730px);
+        position: relative;
+        transform: translate(42vw, 390px);
     }   
     /*content*/
+    .my-work{
+        position: relative;
+        top: 290px;
+    }
     .my-work-content{
     grid-template-columns:  1fr;
     grid-template-rows:auto 1fr  ;
@@ -402,6 +412,10 @@ body{
         margin: 5px;
     }
     /*footer*/
+    .contact-me{
+        position: relative;
+        top: 300px;
+    }
     .contact-me-content{
         width:100vw;     
         justify-items: center;  
@@ -429,6 +443,7 @@ body{
     .footer-address{
         grid-area: ft-address;
         justify-self: center;
+        padding: 20px;
     }
     .footer-links{
         grid-area: ft-links;
