@@ -310,24 +310,24 @@ body{
         min-width:auto;
     }
     .link-top-icon{
-        top: 50px;
-        left: -10px;
+        display: none !important;  
     }
     .git-icon{
-        top: 347px;
-        right: 0px;
+        display: none !important;
     }
     .top-icon-container{
-    transform: translate(380px, -440px);
+        display: none !important;
+        width: min-content;
+        transform: translate(505px, -490px);
     }   
     /*content*/
     .my-work-content{
-    grid-template-columns:  1fr;
-    grid-template-rows:auto 1fr  ;
-    grid-template-areas:
-    'works-title '
-    'project-cards';
-    gap: 0px;
+        grid-template-columns:  1fr;
+        grid-template-rows:auto 1fr  ;
+        grid-template-areas:
+        'works-title '
+        'project-cards';
+        gap: 0px;
     }
     .card-container{
         gap: 10px;
@@ -419,12 +419,14 @@ body{
         left: -10px;
     }
     .git-icon{
+        height: 40px;
+        width: 40px;
         top: 347px;
         right: 0px;
     }
     .top-icon-container{
         position: relative;
-        transform: translate(-42vw, 40px);
+        transform: translate(-41vw, 40px);
     }   
     /*content*/
     .my-work{
