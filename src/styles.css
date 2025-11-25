@@ -353,14 +353,14 @@ body{
             'title'
             'info'
         ;
-        
         grid-area: my-card;
         transform: translateY(50px);
     }
 
     .pfp{
         justify-self: center;
-        margin: 10px;          
+        margin: 10px; 
+         
     }
     .my-name{
         top: 0px;
@@ -369,6 +369,7 @@ body{
     .about-me-title{
          transform: translateX( 0px);
         justify-self: center;
+        margin-bottom: 0px;
         
     }
     .paragraph{
@@ -398,6 +399,45 @@ body{
     }
     .card-container{
         gap: 10px;
-        margin: 0px;
+        margin: 5px;
     }
+    /*footer*/
+    .contact-me-content{
+        width:100vw;     
+        justify-items: center;  
+        color: #f6e8ea;
+        font-size: 25px;  
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "ft-title"
+        "ft-info"
+        "ft-address"
+        "ft-links"
+        "ft-pfp"
+        ;
+    }
+    .footer-title{
+        grid-area: ft-title;
+        justify-self: center;
+    }
+    .footer-info{
+        grid-area: ft-info;
+        justify-self: center;
+    }
+    .footer-address{
+        grid-area: ft-address;
+        justify-self: center;
+    }
+    .footer-links{
+        grid-area: ft-links;
+        justify-self: center;
+    }
+    .footer-pfp{
+        grid-area: ft-pfp;
+        padding: 0px;
+        width: 100vw;
+    }
+
 }
