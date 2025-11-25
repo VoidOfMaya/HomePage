@@ -109,7 +109,7 @@ body{
 }
 
 .pfp{
-
+    object-fit: cover;
     grid-area: pfp;
     animation: grow 1s ease-in-out 1.5s both;
 }
@@ -290,6 +290,7 @@ body{
         max-width:auto;
     }
     .pfp{
+        object-fit: cover;
         float: left;
         position: relative;
         
@@ -316,7 +317,7 @@ body{
         }
         100%{
             opacity: 1;
-            transform: scale(1) translateY(-90px) translateX(-155px);
+            transform: scale(1) translateY(-80px) translateX(-155px);
         }
     }
     .paragraph{
@@ -381,15 +382,16 @@ body{
         ;
         position: relative;
         grid-area: my-card;
-        top: 550px;
+        top: 250px;
     }
 
     .pfp{
+        object-fit: cover;
         transform: translateX(none);
         position: absolute;
         justify-self: center;
         margin: 10px; 
-        top: -610px;         
+        top: -352px;         
     }
     @keyframes grow {
     0%{
@@ -398,7 +400,7 @@ body{
     }
     100%{
         opacity: 1;
-        transform: scale(1)  ;
+        transform: scale(1.2)  ;
     }
 }
     .my-name{
@@ -415,7 +417,7 @@ body{
         }
         100%{
             opacity: 1;
-            transform: scale(1) translateY(240px) translateX(180px);
+            transform: scale(1) translateY(240px) translateX(185px);
         }
     }
     .about-me-title{
@@ -442,12 +444,12 @@ body{
     }
     .top-icon-container{
         position: relative;
-        transform: translate(-39vw, 40px);
+        transform: translate(-39vw, 55px);
     }   
     /*content*/
     .my-work{
         position: relative;
-        top: 550px;
+        top: 250px;
     }
     .my-work-content{
     grid-template-columns:  1fr;
