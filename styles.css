@@ -61,7 +61,7 @@ body{
 .my-name{
     position: absolute;
     transform: translateY(250px) translateX(140px) ;
-    color: #f6e8ea;
+    color: #ffffff;
     font-weight: 900;
     font-size: 80px;
     animation: name-fade-in 1s 3s ease-out both;
@@ -74,7 +74,7 @@ body{
     }
     100%{
         opacity: 1;
-        transform: scale(1) translateY(310px) translateX(120px);
+        transform: scale(1) translateY(400px) translateX(10px);
     }
 }
 .about-me{
@@ -109,7 +109,7 @@ body{
 }
 
 .pfp{
-
+    object-fit: cover;
     grid-area: pfp;
     animation: grow 1s ease-in-out 1.5s both;
 }
@@ -147,7 +147,7 @@ body{
     }
     100%{
         opacity: 1;
-        transform: scaleX(1.2) scaleY(1.5) translateX(-20px);
+        transform: scale(1.2) translateX(-20px);
     }
 }
 .link-top-icon{
@@ -162,6 +162,7 @@ body{
 }
 .top-icon-container{
     position: relative;
+    align-self: center;
     
     
 }
@@ -236,7 +237,7 @@ body{
 }
 /*contact*/
 .contact-me{
-    margin-top: 10px;
+    margin-top: 100px;
     grid-area: footer;
     position: bottom;
     background-color: #22181c;
@@ -287,15 +288,27 @@ body{
         display: block;
         min-width: auto;
         max-width:auto;
-
     }
     .pfp{
-
+        object-fit: cover;
         float: left;
         position: relative;
-        top: -55px;
-        right: 30px;
-   
+        
+    }
+    @keyframes grow {
+        0%{
+            opacity: 0;
+            transform-origin: bottom right;
+            transform: scale(1) translateX(0px);
+        }
+        100%{
+            opacity: 1;
+            transform-origin: bottom right;
+            transform: scale(1.2) translateX(-20px);
+        }
+    }
+    .my-name{
+        width: max-content;
     }
     @keyframes name-fade-in {
         0%{
@@ -304,7 +317,7 @@ body{
         }
         100%{
             opacity: 1;
-            transform: scale(1) translateY(-85px) translateX(-20px);
+            transform: scale(1) translateY(-80px) translateX(-155px);
         }
     }
     .paragraph{
@@ -369,15 +382,16 @@ body{
         ;
         position: relative;
         grid-area: my-card;
-        top: 350px;
+        top: 250px;
     }
 
     .pfp{
+        object-fit: cover;
         transform: translateX(none);
         position: absolute;
         justify-self: center;
         margin: 10px; 
-        top: -360px;         
+        top: -352px;         
     }
     @keyframes grow {
     0%{
@@ -390,6 +404,7 @@ body{
     }
 }
     .my-name{
+        width: max-content;
         top: -320px;
         right: 220px;
         transform: none;
@@ -402,7 +417,7 @@ body{
         }
         100%{
             opacity: 1;
-            transform: scale(1) translateY(240px) translateX(120px);
+            transform: scale(1) translateY(240px) translateX(185px);
         }
     }
     .about-me-title{
@@ -429,12 +444,12 @@ body{
     }
     .top-icon-container{
         position: relative;
-        transform: translate(-39vw, 40px);
+        transform: translate(-39vw, 55px);
     }   
     /*content*/
     .my-work{
         position: relative;
-        top: 290px;
+        top: 250px;
     }
     .my-work-content{
     grid-template-columns:  1fr;
@@ -451,7 +466,7 @@ body{
     /*footer*/
     .contact-me{
         position: relative;
-        top: 300px;
+        top: 550px;
     }
     .contact-me-content{
         width:100vw;     
