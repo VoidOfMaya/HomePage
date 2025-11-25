@@ -37,25 +37,26 @@ body{
 #background-el{
     position: relative;
     background: linear-gradient(to top,#F13030, #f45b69  ) ;
-    width: 150vw;
+    width: 100vw;
     height: 50vh;
     z-index: -1;
     box-shadow:1px 10px 51px -36px  rgba(34, 24, 28);
     transform-origin: bottom left;
     transform: translateY(-20vh);
     animation: bounce 1.5s ease 0s forwards ;
+    overflow: hidden;
 
 
 }
 @keyframes bounce{
     0%{
      
-        transform:rotate(-90deg)
+        transform:skewY(-90deg)
     }
 
     100%{
        
-        transform:rotate(-19deg);
+        transform:skewY(-20deg);
     }
 }
 .my-name{
@@ -101,6 +102,7 @@ body{
     'pfp info'
     ;
     box-shadow: 1px 10px 51px -36px  rgba(34, 24, 28);
+    justify-self: center;
     animation: slide 2s ease-in-out  both;
 
 }
@@ -129,7 +131,7 @@ body{
     }
     100%{
         opacity: 1;
-        transform:translateX(-25vw);
+        transform:translateX(0);
      
     }
 }
