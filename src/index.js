@@ -27,7 +27,7 @@ addCard('Simply-Todo',
         'https://voidofmaya.github.io/Simply-Todo/',
         todoApp,
 
-        "The Todo app is a staple project and a milestone for growing developers as it combines the complixity of  handelling DOM events and element management, as well as handelling CRUD operations and presentation of the correct data to the user!"
+        "The Todo app is a staple project and a milestone for growing developers as it combines the complixity of  handelling DOM events and element management, as well as handelling CRUD operations!"
 );
 addCard('Admin Dashboard',
         'https://github.com/VoidOfMaya/Admin-Dashboard',

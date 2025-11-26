@@ -12,9 +12,10 @@ const addCard=(name, repository,livePreview , photo, info)=>{
     card.style.display='grid';
     card.style.width = '320px';
     card.style.height = '450px';
-    card.style.backgroundColor ='#fff7f8'
-    card.style.borderRadius ='10px 10px 0px 0px'
-    card.style.boxShadow='1px 10px 51px -36px  rgba(34, 24, 28)'
+    card.style.backgroundColor ='#fff7f8';
+    card.style.borderRadius ='10px 10px 0px 0px';
+    card.style.boxShadow='1px 10px 51px -36px  rgba(34, 24, 28)';
+    //card.style.height="max-Content"
 
     screenshot.src = photo
     screenshot.sizes ="(max-width)"
@@ -25,7 +26,7 @@ const addCard=(name, repository,livePreview , photo, info)=>{
     title.innerHTML=name;
     title.style.justifySelf= 'center';
     title.style.position = 'absolute';
-    title.style.transform='translateY(150px)';
+    title.style.transform='translateY(140px)';
 
     
 
@@ -33,7 +34,7 @@ const addCard=(name, repository,livePreview , photo, info)=>{
     about.style.justifySelf="center";
     about.style.alignSelf="start";
     about.style.margin= '5px';
-    about.style.fontSize = "24px";
+    about.style.fontSize = "20px";
 
     githubIcon.style.height = "30px";
     githubIcon.style.width = '30px';
